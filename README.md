@@ -1,8 +1,5 @@
 # Index, Show, New, Create Lab
 
-## Objectives
-
-1. Build a RESTful `index` action
 2. Build a RESTful `show` action
 3. Build a RESTful `new` action
 4. Build a RESTful `create` action
