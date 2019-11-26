@@ -1,0 +1,11 @@
+<h1>Coupons#new</h1>
+<p>Find me in app/views/coupons/new.html.erb</p>
+<h1>Create New Coupon</h1>
+<h2>Coupon Form</h2>
+<%= form_for @coupon do |f|%>
+  <%= f.label "Coupon Code:" %>
+  <%= f.text_field :coupon_code%>
+  <%= f.label "Coupon Store: "%>
+  <%= f.text_field :store%>
+  <%= f.submit "Submit Coupon" %>
+<% end %>
