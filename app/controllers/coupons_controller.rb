@@ -1,11 +1,11 @@
 class CouponsController < ApplicationController
-
+  before_action :find_coupon, only: [:show, :edit, :update, :destroy]
   def index
     @coupon = Coupon.all
   end
 
   def show
-    find_coupon
+    # find_coupon
   end
 
   def new
@@ -17,18 +17,18 @@ class CouponsController < ApplicationController
   end
 
   def edit
-    find_coupon
+    # find_coupon
   end
 
   def update
-    coupon = find_coupon
-    coupon.update(coupons_strong_params)
-    redirect_to coupon_path(coupon)
+    # coupon = find_coupon
+    @coupon.update(coupons_strong_params)
+    redirect_to coupon_path(@coupon)
   end
 
   def destroy
-    coupon = find_coupon
-    coupon.destroy
+    # coupon = find_coupon
+    @coupon.destroy
     redirect_to coupons_path
   end
 
